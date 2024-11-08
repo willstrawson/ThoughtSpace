@@ -222,10 +222,10 @@ class basePCA(TransformerMixin, BaseEstimator):
             cols = _df.columns
             outcols = []
             for col in cols:
-                if "focus" in col.lower():
-                    col = col.lower().replace("focus","Task")
-                if "other" in col.lower():
-                    col = col.lower().replace("other","People")
+                #if "focus" in col.lower():
+                #    col = col.lower().replace("focus","Task")
+                #if "other" in col.lower():
+                #    col = col.lower().replace("other","People")
                 outcols.append(col)
             mapper = {cols[x]:outcols[x] for x in range(len(outcols))}
             _df = _df.rename(mapper,axis=1)
@@ -310,10 +310,10 @@ class basePCA(TransformerMixin, BaseEstimator):
             cols = _df.columns
             outcols = []
             for col in cols:
-                if "focus" in col.lower():
-                    col = col.lower().replace("focus","Task")
-                if "other" in col.lower():
-                    col = col.lower().replace("other","People")
+                #if "focus" in col.lower():
+                #    col = col.lower().replace("focus","Task")
+                #if "other" in col.lower():
+                #    col = col.lower().replace("other","People")
                 outcols.append(col)
             mapper = {cols[x]:outcols[x] for x in range(len(outcols))}
             _df = _df.rename(mapper,axis=1)
