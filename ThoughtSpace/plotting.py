@@ -82,7 +82,9 @@ def save_wordclouds(df: pd.DataFrame, path: str, font: str = "helvetica", n_item
                 return "#00156A"  # Hex code for blue
 
         BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-        FONT_DIR = os.path.join(BASE_DIR, f'fonts\\{font}.ttf')
+        print(f'BASE_DIR = {BASE_DIR}')
+        FONT_DIR = os.path.join(BASE_DIR, 'fonts', f'{font}.ttf') 
+        print(f'FONT_DIR= {FONT_DIR}')
 
         wc = WordCloud(
             font_path= FONT_DIR,
