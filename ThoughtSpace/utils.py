@@ -53,8 +53,8 @@ def returnhighest(df: pd.DataFrame, n: int) -> str:
     highposvals = posvals.sort_values(ascending=False).index.tolist()
     negvals = realvals[realvals < 0]
     highnegvals = negvals.sort_values(ascending=False).index.tolist()
-    posoutstring = "_".join(highposvals)
-    negoutstring = "_".join(highnegvals)
+    posoutstring = "-".join(highposvals)
+    negoutstring = "-".join(highnegvals)
     if negoutstring == "":
         return f"Positive_{posoutstring}"
     if posoutstring == "":
